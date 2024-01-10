@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+html, body {
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("../docs/assets/images/rip_joe.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+  font-size: xxx-large;
+}
+
+</style>
+
+</head>
+
+<body onclick="playMusic()">
+<h1 class="bottom" id="text_field">TAP TO PAY RESPECTS</h1>
+
+<audio autoplay loop id="divAudio">
+  <source src="../docs/assets/sounds/trimmed_see_you.mp3" type="audio/mp3">
+</audio>
+<script>
+  var vAudio = document.getElementById("divAudio");
+  function playMusic() {
+    vAudio.play();
+    var text_element = document.getElementById("text_field");
+    text_element.textContent += " 🔉";
+  }
+</script>
+
+</body>
+</html>
